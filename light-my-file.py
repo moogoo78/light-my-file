@@ -128,17 +128,11 @@ if __name__ == '__main__':
                       help='auto add_seq')
     (options, args) = parser.parse_args()
 
-    #m = None
-    #if args:
-    #    m = re.search('%0?[0-9]?d', args[0])
-        
-    print 'opts:', options, 'args', args
+    #print 'opts:', options, 'args', args
     
     if not args:
         parser.print_help()
     elif '%s' not in args[0]:
         parser.print_help()
-    #elif not m or not m.group(0):
-    #    parser.print_help()        
     else:
         main(args[0], options)
